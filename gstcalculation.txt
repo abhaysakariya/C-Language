@@ -1,0 +1,40 @@
+﻿#include<stdio.h>
+
+int main() {
+    char name;
+    int i,number,price,add=0;
+    float gst,gt;
+    printf("Product Name: H,F,E\n");
+    printf("Enter Product Name: ");
+    scanf("%c",&name);
+    printf("Enter Product Number: ");
+    scanf("%d",&number);
+    for(i=1;i<=number;i++)
+    {
+        printf("Enter price: ");
+        scanf("%d",&price);
+        add=add+price;
+    }
+    printf("Total= %d\n",add);
+    if(name == 'h')
+    {
+        gst=(add*25)/100;
+        printf("GST = %f\n",gst);
+        gt=add+gst;
+        printf("Grand Total= %d+%f=%f",add,gst,gt);
+    }
+    else if(name == 'f')
+    {
+        gst=(add*10)/100;
+        printf("GST = %f\n",gst);
+        gt=add+gst;
+        printf("Grand Total= %d+%f=%f\n",add,gst,gt);
+    }
+    else if(name == 'e')
+    {
+        gst=(add*30)/100;
+        printf("GST = %f\n",gst);
+        gt=add+gst;
+        printf("Grand Total= %d+%f=%f\n",add,gst,gt);
+    }
+}

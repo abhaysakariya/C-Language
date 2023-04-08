@@ -1,0 +1,29 @@
+﻿#include<stdio.h>
+int main() {
+    int i,no,gst,add=0,price[30],total;
+    char name[30];
+    
+    printf("Enter Number Of Items: ");
+    scanf("%d",&no);
+    
+    for(i=1;i<=no;i++)
+    {
+        printf("Enter Name: ");
+        scanf("%s",&name[i]);
+        printf("Enter Price: ");
+        scanf("%d",&price[i]);
+        add=add+price[i];
+        
+    }
+    
+    printf("Srno      Product Name        Price\n");
+    for(i=1;i<=no;i++)
+    {
+        printf("%d              %c               %d\n",i,name[i],price[i]);
+    }
+    printf("             GROSS             %d\n",add);
+    gst=(add*18)/100;
+    printf("             GST18             %d\n",gst);
+    total=add+gst;
+    printf("             TOTAL             %d\n",total);
+}
